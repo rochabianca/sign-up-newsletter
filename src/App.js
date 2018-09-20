@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./App.min.css";
 
-import HelloComponent from "./components/forms/HelloComponent";
+import Background from "./components/forms/Background";
 
 class App extends Component {
   render() {
     return (
       <div className="App bg">
         <div className="container">
-          <HelloComponent />
+          <Background />
         </div>
       </div>
     );

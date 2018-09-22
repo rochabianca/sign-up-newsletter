@@ -2,4 +2,10 @@
 @import "_reset";
 @import "_bootstrap-grid";
 @import "_bg";
-@import "_input-box";
+@import "_input_box";
+@import "_input";
+@import "_button";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}

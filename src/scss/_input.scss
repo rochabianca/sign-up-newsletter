@@ -1,0 +1,29 @@
+.input {
+  margin-bottom: 15px;
+  label {
+    display: block;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    margin-left: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 10px 10px;
+    border: 2px solid $light-gray;
+    border-radius: 25px;
+    outline: none;
+  }
+
+  &.input--invalid {
+    input {
+      border-color: $primary;
+    }
+  }
+}
+
+.input--danger {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: $primary;
+}

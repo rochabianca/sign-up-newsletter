@@ -2186,4 +2186,73 @@ html {
 /*# sourceMappingURL=bootstrap-grid.css.map */
 .bg {
   background: #d14167;
+  height: 100vh;
+}
+
+.input-box {
+  margin: 100px auto;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 30px;
+  box-shadow: 0px 1px 1px 0px #eee;
+}
+
+.input-box__title {
+  font-family: "Tangerine", cursive;
+  font-size: 42px;
+  text-align: center;
+  margin: 30px 0;
+  color: #444;
+}
+
+.input {
+  margin-bottom: 15px;
+}
+
+.input label {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.input input {
+  width: 100%;
+  padding: 10px 10px;
+  border: 2px solid #eee;
+  border-radius: 25px;
+  outline: none;
+}
+
+.input.input--invalid input {
+  border-color: #d14167;
+}
+
+.input--danger {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #d14167;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 30px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+.button.button__submit {
+  background: #16cc8e;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }

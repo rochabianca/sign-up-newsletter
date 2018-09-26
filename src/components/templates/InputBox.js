@@ -5,7 +5,6 @@ class InputBox extends Component {
   state = {
     name: "",
     email: "",
-    age: "",
     error: {}
   };
   onChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -15,7 +14,6 @@ class InputBox extends Component {
     if (item === "") errors = true;
 
     if (errors) {
-      console.log(item);
       this.setState({ error: { [name]: `${name} is required` } });
       return true;
     } else {
@@ -26,23 +24,30 @@ class InputBox extends Component {
 
   onSubmit = async e => {
     e.preventDefault();
-    const { name, age } = this.state;
+    const { name, email } = this.state;
     this.hasError(name, "name");
-    this.hasError(age, "age");
+    this.hasError(email, "email");
 
-    if (!this.hasError(name, "name") && !this.hasError(age, "age")) {
+    if (!this.hasError(name, "name") && !this.hasError(email, "email")) {
       const newRecipient = {
         name,
-        age
+        email
       };
+      localStorage.setItem("recipient", JSON.stringify(newRecipient));
+
+      this.setState({
+        name: "",
+        email: ""
+      });
     }
   };
 
   render() {
-    const { name, age, error } = this.state;
+    const { name, email, error } = this.state;
+    const { title, value } = this.props;
     return (
       <div className="input-box col-sm-5 col-md-6 col-lg-5 col-xl-5 ">
-        <h3 className="input-box__title">Sign up to Our Newsletter</h3>
+        <h3 className="input-box__title">{title}</h3>
         <form onSubmit={this.onSubmit.bind(this)}>
           <Input
             label="name"
@@ -53,14 +58,19 @@ class InputBox extends Component {
             error={error.name}
           />
           <Input
-            label="age"
-            name="age"
-            placeholder="Your age"
-            value={age}
+            label="E-mail"
+            name="email"
+            placeholder="Your E-mail"
+            value={email}
+            type="email"
             onChange={this.onChange}
-            error={error.age}
+            error={error.email}
           />
-          <input type="submit" value="next" className="button button__submit" />
+          <input
+            type="submit"
+            value={value}
+            className="button button__submit"
+          />
         </form>
       </div>
     );

@@ -1,0 +1,17 @@
+.thanks__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.thanks__link {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  color: $secundary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

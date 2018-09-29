@@ -23,7 +23,7 @@ Input.propTypes = {
   label: propTypes.string.isRequired,
   placeholder: propTypes.string.isRequired,
   type: propTypes.string.isRequired,
-  value: propTypes.string.isRequired,
+  value: propTypes.string,
   onChange: propTypes.func.isRequired,
   error: propTypes.string
 };

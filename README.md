@@ -1,5 +1,4 @@
 # To Do
 
-- animation to show edit page
-- option to edit email and name
-- confirm screen
+X confirm screen
+X option to edit email and name

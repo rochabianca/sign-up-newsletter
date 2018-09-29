@@ -2253,6 +2253,24 @@ html {
   background: #16cc8e;
 }
 
+.thanks__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.thanks__link {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  color: #16cc8e;
+  text-decoration: none;
+}
+
+.thanks__link:hover {
+  text-decoration: underline;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
